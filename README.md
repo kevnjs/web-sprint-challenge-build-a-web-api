@@ -70,21 +70,21 @@ Inside `api/actions/actions-router.js` build endpoints for performing CRUD opera
 - [x] `[GET] /api/actions/:id`
   - Returns an action with the given `id` as the body of the response.
   - If there is no action with the given `id` it responds with a status code 404.
-- [ ] `[POST] /api/actions`
+- [x] `[POST] /api/actions`
   - Returns the newly created action as the body of the response.
   - If the request body is missing any of the required fields it responds with a status code 400.
   - When adding an action make sure the `project_id` provided belongs to an existing `project`.
-- [ ] `[PUT] /api/actions/:id`
+- [x] `[PUT] /api/actions/:id`
   - Returns the updated action as the body of the response.
   - If there is no action with the given `id` it responds with a status code 404.
   - If the request body is missing any of the required fields it responds with a status code 400.
-- [ ] `[DELETE] /api/actions/:id`
+- [x] `[DELETE] /api/actions/:id`
   - Returns no response body.
   - If there is no action with the given `id` it responds with a status code 404.
 
 #### Middleware functions
 
-- [ ] Write at least two middleware functions for this API, and consume them in the proper places of your code.
+- [x] Write at least two middleware functions for this API, and consume them in the proper places of your code.
 
 ### Database Schemas
 
@@ -147,7 +147,22 @@ We have provided test data for all the resources.
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+
+Node allows us to run and use javascript off the browser and is highly scalable when building web services.
+It's asynchronous, single-threaded, and has access to npm libraries
+
 1. Understand and explain the use of Middleware.
+
+Middleware is a set of functions that add features such as modifying request, and responses in express. It's injecting code to run in between events. 
+
 1. The basic principles of the REST architectural style.
+
+REST architecture uses http methods like GET, PUT, POST,PATCH, and DELETE to interact with client requests and responds with a JSON formatted information
+
 1. Understand and explain the use of Express Routers.
+
+Express routers allow us to separate our app into sub-apps and helps our code organization. It's used to grab certain endpoints specified and lets it have it own middleware and run the code that corresponds with that endpoint. 
+
 1. Describe tooling used to manually test the correctness of an API.
+
+Tools such as postman ot httpie allows us to test our put,get, post, etc.. requests to the api and see the responses the api sends for every action we take on the client side
